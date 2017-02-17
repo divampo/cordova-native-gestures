@@ -1,0 +1,33 @@
+{
+  "name": "cordova-native-gestures",
+  "version": "1.0.0",
+  "description": "Use native platform gestures in your cordova app for better gesture sensitivity and higher triggering frequency.",
+  "cordova": {
+    "id": "cordova-native-gestures",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/divampo/cordova-native-gestures.git"
+  },
+  "keywords": [
+    "Native gestures",
+    "gestures",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "Dmitry Divampo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/divampo/cordova-native-gestures/issues"
+  },
+  "homepage": "https://github.com/divampo/cordova-native-gestures#readme"
+}

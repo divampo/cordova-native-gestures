@@ -1,0 +1,30 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+//indicates that this is a library
+apply plugin: 'android-library'
+
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter();
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.3.+'
+    }
+}
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.3"
+
+    defaultConfig {
+        minSdkVersion 17
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}

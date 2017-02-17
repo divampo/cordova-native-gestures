@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-native-gestures"
+    name="NativeGestures"
+    version="1.0.0"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0">
+    <name>cordova-native-gestures</name>
+    <description>Use native platform gestures in your cordova app for better gesture sensitivity and higher triggering frequency.</description>
+    <author>Dmitry Divampo</author>
+
+    <js-module name="NativeGestures" src="www/NativeGestures.js">
+        <clobbers target="nativeGestures" />
+    </js-module>
+
+    <platform name="android">
+        <framework src="com.android.support:appcompat-v7:21+" />
+
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="NativeGestures">
+                <param name="android-package" value="com.divampo.cordova.NativeGestures.NativeGesturesPlugin" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/com/divampo/cordova/NativeGestures/NativeGesturesPlugin.java" target-dir="src/com/divampo/cordova/NativeGestures" />
+        <source-file src="src/android/com/divampo/cordova/NativeGestures/NativeGesturesSimpleListener.java" target-dir="src/com/divampo/cordova/NativeGestures" />
+        <source-file src="src/android/com/divampo/cordova/NativeGestures/NativeGesturesScaleListener.java" target-dir="src/com/divampo/cordova/NativeGestures" />
+    </platform>
+</plugin>
